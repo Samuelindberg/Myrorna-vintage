@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin:0;
     height: 300vh;
@@ -61,31 +64,7 @@ body{
     color:white;
     font-family: Arial, Helvetica, sans-serif;
 }
-/* section hand-picked */
-.hand-picked{
-    border:1px solid black;
-    height: 100vh;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: black;
-}
-#hand-picked{
-    margin-top:120px;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.hand-picked-img{
-    width:200px;
-   margin-left: 20px;
-   margin-right: 20px;
-}
-.items{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 800px;
-}
+
 /* nav hover */
 #men:hover{
     color:hwb(205 69% 1%)
@@ -111,4 +90,54 @@ body{
 }
 .see-more:hover{
     color:black;
+}
+/* section hand-picked */
+.hand-picked{
+    border:1px solid black;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+#hand-picked{
+    margin-top:120px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.hand-picked-img{
+    width:200px;
+   margin-left: 20px;
+   margin-right: 20px;
+}
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 800px;
+}
+/* new arrivals section */
+.new-arrivals{
+    border:1px solid black;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+.new-arrivals-title{
+    margin-top:120px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.new-arrival-img{
+   width:200px;
+   margin-left: 20px;
+   margin-right: 20px;
+}
+.new-arrival-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 800px;
 }
