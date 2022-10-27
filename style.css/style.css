@@ -178,12 +178,14 @@ body{
 
 /* mobile site optimization */
 .side-menu-background{
+    z-index: 20;
     width: 100vw;
     height: 100vh;
-    background-color: blue;
+    background-color: #60A9DD;
     position: fixed;
     display:none;
 }
+
 #hamburger-menu{
     padding:0;
 }
@@ -194,14 +196,27 @@ body{
     flex-direction: column;
     list-style-type: none;
     padding: 0;
+    margin: 0;
+}
+.hamburger-icon{
+    max-width: 30px;
 }
 .hamburger-list-items{
     height:12.5vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: #60A9DD;
+    color:white;
+    font-size: 30px;
+    padding-left: 20px;
+}
+a{
     text-decoration: none;
+}
+.test{
+    width: 110px;
+    height:100px
 }
 .men{
     
@@ -209,13 +224,21 @@ body{
 
 @media screen and (max-width:671px){
     .side-menu-background{
-        display: inline;
+    
     }
     #sidebar-menu{
     z-index: 400;
    }
     .nav-container{
         visibility: hidden;
+    }
+    .logo{
+        padding-right: 20px;
+    }
+    .test.test:onclick{
+        .side-menu-background{
+            display: inline;
+        }
     }
 
 }
