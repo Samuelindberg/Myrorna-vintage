@@ -3,7 +3,7 @@ html{
 }
 body{
     margin:0;
- 
+    width:100vw;
 }
 .header{
     top:0;
@@ -110,7 +110,7 @@ body{
 /*  hand-picked section*/
 .hand-picked{
     border:1px solid black;
-    height: 100vh;
+    height: fit-content;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -130,7 +130,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 800px;
+    max-width: 800px;
 }
 /* new arrivals section */
 .new-arrivals{
@@ -155,7 +155,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 800px;
+    max-width: 800px;
 }
 /* google maps site */
 .google-maps{
@@ -174,6 +174,48 @@ body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 45px;
 }
-.maps-link{
+
+
+/* mobile site optimization */
+.side-menu-background{
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+    position: fixed;
+    display:none;
+}
+#hamburger-menu{
+    padding:0;
+}
+.hamburger-menu-list{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+}
+.hamburger-list-items{
+    height:12.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #60A9DD;
+    text-decoration: none;
+}
+.men{
     
+}
+
+@media screen and (max-width:671px){
+    .side-menu-background{
+        display: inline;
+    }
+    #sidebar-menu{
+    z-index: 400;
+   }
+    .nav-container{
+        visibility: hidden;
+    }
+
 }
