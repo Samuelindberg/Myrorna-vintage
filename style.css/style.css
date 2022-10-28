@@ -14,7 +14,7 @@ body{
    height: 100px;
     background-color: #357BAD  ;
     position: fixed;
-    z-index: -1;
+
 }
 /* NAVIGATION */
 .nav-container{
@@ -110,7 +110,7 @@ body{
 }
 /*  hand-picked section*/
 .hand-picked{
-    height: fit-content;
+    min-height: 100vh;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -134,12 +134,14 @@ body{
 }
 /* new arrivals section */
 .new-arrivals{
-    height: 100vh;
+    min-height: 100vh;
+  
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: black;
+
 }
 .new-arrivals-title{
     margin-top:120px;
@@ -220,7 +222,9 @@ a{
 
 
 @media screen and (max-width:671px){
-  
+  .new-arrivals-title{
+    margin: 0;
+  }
     #sidebar-menu{
     z-index: 400;
    }
