@@ -134,14 +134,12 @@ body{
 }
 /* new arrivals section */
 .new-arrivals{
-    min-height: 100vh;
-  
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: black;
-
+    min-height: 100vh;
 }
 .new-arrivals-title{
     margin-top:120px;
@@ -176,71 +174,102 @@ body{
     font-size: 45px;
 }
 
-
-/* mobile site optimization */
-.side-menu-background{
-    top:0;
+/* hamburger menu */
+.hamburger-container{
+    display:none;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    
+}
+.hamburger-container input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+   
+}
+.sidemenu{
+    position: absolute;
+    margin-top: 30px;
     width: 100vw;
     height: 100vh;
     background-color: #60A9DD;
-    position: fixed;
-    visibility: hidden;
+    transition: all 200ms;
+    left:-100vw;
 }
 
-#hamburger-menu{
-    padding:0;
+.hamburger-bar{
+    width:30px;
+    height: 5px;
+    border-radius: 2px;
+    background-color: white;
+    margin-bottom: 5px;
+    transition: all 200ms;
+    top:30px;
+    z-index: 200;
+}
+#sidebar-menu{
+   
+}
+.hamburger-bar ul{
+    list-style-type: none;
 }
 .hamburger-menu-list{
-    width: 100vw;
     height: 100vh;
+    list-style-type: none;
     display: flex;
     flex-direction: column;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-.hamburger-icon{
-    max-width: 30px;
-}
-.hamburger-list-items{
-    height:12.5vh;
-    display: flex;
-    justify-content: flex-start;
     align-items: center;
-    background-color: #60A9DD;
-    color:white;
-    font-size: 30px;
-    padding-left: 20px;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
-a{
+.hamburger-container a{
     text-decoration: none;
+    height:30px;
+    text-align: center;
+    color: white;
+    font-family:montserrat;
+    border-bottom: 1px solid black;
 }
-#hamburger-input{
-    z-index: 400;
-    position: absolute;
+.hamburger-container input:checked ~.hamburger-bar{
+    background-color: white; 
+    transform: rotate(45deg) translate(6px, 8px);
+    
 }
-
-
+.hamburger-container input:checked ~.hamburger-bar:nth-child(3){
+    opacity: 0;
+}
+.hamburger-container input:checked ~.hamburger-bar:nth-child(4){
+    background-color: white;
+    transform: rotate(-45deg) translate(6px, -8px);
+}
+.hamburger-container input:checked ~.sidemenu{
+ transform: translateX(100vw);
+ display: block;
+}
+.hamburger-container input:checked ~.hamburger-bar{
+    background-color: white; 
+    transform: rotate(45deg) translate(6px, 8px);
+    
+}
+.hamburger-container input:checked ~.hamburger-bar:nth-child(3){
+    opacity: 0;
+}
+.hamburger-container input:checked ~.hamburger-bar:nth-child(4){
+    background-color: white;
+    transform: rotate(-45deg) translate(6px, -8px);
+}
 @media screen and (max-width:671px){
+    .hamburger-container{
+        display: block;
+    }
   .new-arrivals-title{
     margin: 0;
   }
-    #sidebar-menu{
-    z-index: 400;
-   }
     .nav-container{
         visibility: hidden;
     }
-    .logo{
-        padding-right: 20px;
-    }
-    .test{
-        display: block;
-    }
-    #hamburger-input:checked + #hamburger-menu #sidebar-menu{
-        visibility: visible;
-        left: 0;
-    }
-   
-
 }
