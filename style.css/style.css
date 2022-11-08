@@ -267,12 +267,27 @@ a:click
     background-color: white;
     transform: rotate(-45deg) translate(6px, -8px);
 }
+
+/* hamburger menu */
+#hamburger-menu{
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+}
+.hamburger-bar{
+    transition: 200ms;
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background-color: black;
+    border-radius: 2px;
+}
 @media screen and (max-width:671px){
-    .hamburger-container{
-        display: block;
-    }
   .new-arrivals-title{
     margin: 0;
+  }
+  #hamburger-menu{
+    visibility: visible;
   }
     .nav-container{
         visibility: hidden;
